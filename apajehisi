@@ -1,1 +1,205 @@
-const _0x5846f0=_0x1808;(function(_0x1ab5fb,_0x17ea3c){const _0x5d7d26=_0x1808,_0x46ae19=_0x1ab5fb();while(!![]){try{const _0x508de3=parseInt(_0x5d7d26(0x175))/0x1*(parseInt(_0x5d7d26(0x160))/0x2)+-parseInt(_0x5d7d26(0x134))/0x3+-parseInt(_0x5d7d26(0x143))/0x4+-parseInt(_0x5d7d26(0x177))/0x5*(-parseInt(_0x5d7d26(0x13a))/0x6)+-parseInt(_0x5d7d26(0x173))/0x7*(-parseInt(_0x5d7d26(0x13b))/0x8)+-parseInt(_0x5d7d26(0x161))/0x9*(parseInt(_0x5d7d26(0x14d))/0xa)+parseInt(_0x5d7d26(0x149))/0xb*(parseInt(_0x5d7d26(0x15d))/0xc);if(_0x508de3===_0x17ea3c)break;else _0x46ae19['push'](_0x46ae19['shift']());}catch(_0x1afda6){_0x46ae19['push'](_0x46ae19['shift']());}}}(_0x2f59,0xce21c));let soalAktif=[],indeksSekarang=0x0,jawabanUser=[],sisaWaktu=durasiKuisDetik,intervalTimer=null;function _0x2f59(){const _0x1f321d=['2407473rjheWt','Enter','round','<span\x20style=\x22color:#c0392b;\x20font-weight:bold;\x22>✗\x20Salah</span>','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22review-q\x22>','forEach','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20','remove','addEventListener','info-durasi','Masih\x20ada\x20soal\x20yang\x20belum\x20diisi.\x20Tetap\x20kirim\x20jawaban?','toLowerCase','none','div','classList','style','random','padStart','1330826EOgHHv','some','2BXEMHK','salah','23585HEGYAz','innerHTML','trim','disabled','start-btn','Waktu\x20habis!\x20Jawaban\x20Anda\x20otomatis\x20dikirim.','timer-badge','720333YpXWkd','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22review-a\x22>Jawaban\x20Anda:\x20','click','score-detail','benar','length','48GHsyJB','8GAnpym','preventDefault','review-container','submit-btn','concat','info-jumlah-soal','add','instruction-note','2724860TqkFFz','textContent','floor','warning','pertanyaan','start-section','916509TPITkV','\x20—\x20','<i>(Tidak\x20dijawab)</i>','Skor\x20Akhir:\x20','10dqLTTg','<span\x20style=\x22color:#27ae60;\x20font-weight:bold;\x22>✓\x20Benar</span>','key','\x20Soal\x20Isian\x20Singkat','question-text','display','prev-btn','final-score','block','value','progress-text','review-item\x20','getElementById','includes','createElement','\x20/\x20','156OBBRsh','next-btn','className','722138rlQQsx'];_0x2f59=function(){return _0x1f321d;};return _0x2f59();}const startSection=document['getElementById'](_0x5846f0(0x148)),quizSection=document[_0x5846f0(0x159)]('quiz-section'),resultSection=document[_0x5846f0(0x159)]('result-section'),questionTextEl=document['getElementById'](_0x5846f0(0x151)),answerInputEl=document[_0x5846f0(0x159)]('answer-input'),progressTextEl=document['getElementById'](_0x5846f0(0x157)),timerBadgeEl=document['getElementById'](_0x5846f0(0x133)),startBtn=document[_0x5846f0(0x159)](_0x5846f0(0x131)),prevBtn=document[_0x5846f0(0x159)](_0x5846f0(0x153)),nextBtn=document[_0x5846f0(0x159)](_0x5846f0(0x15e)),submitBtn=document[_0x5846f0(0x159)](_0x5846f0(0x13e)),restartBtn=document[_0x5846f0(0x159)]('restart-btn');function formatWaktu(_0x5638a0){const _0x5dc9e8=_0x5846f0,_0x29095e=Math[_0x5dc9e8(0x145)](_0x5638a0/0x3c),_0x190dc5=_0x5638a0%0x3c;return''[_0x5dc9e8(0x13f)](String(_0x29095e)[_0x5dc9e8(0x172)](0x2,'0'),':')[_0x5dc9e8(0x13f)](String(_0x190dc5)[_0x5dc9e8(0x172)](0x2,'0'));}document[_0x5846f0(0x159)](_0x5846f0(0x140))['textContent']=''[_0x5846f0(0x13f)](daftarSoal[_0x5846f0(0x139)],_0x5846f0(0x150)),document[_0x5846f0(0x159)](_0x5846f0(0x16a))[_0x5846f0(0x144)]=formatWaktu(durasiKuisDetik),document[_0x5846f0(0x159)](_0x5846f0(0x142))[_0x5846f0(0x178)]=catatanPengerjaan;function mulaiTimer(){const _0x30db1e=_0x5846f0;clearInterval(intervalTimer),sisaWaktu=durasiKuisDetik,timerBadgeEl[_0x30db1e(0x144)]=''[_0x30db1e(0x13f)](formatWaktu(sisaWaktu)),timerBadgeEl[_0x30db1e(0x16f)][_0x30db1e(0x168)](_0x30db1e(0x146)),intervalTimer=setInterval(()=>{const _0x4ca9b7=_0x30db1e;sisaWaktu--,timerBadgeEl[_0x4ca9b7(0x144)]=''[_0x4ca9b7(0x13f)](formatWaktu(sisaWaktu)),sisaWaktu<=0xa&&timerBadgeEl[_0x4ca9b7(0x16f)][_0x4ca9b7(0x141)]('warning'),sisaWaktu<=0x0&&(clearInterval(intervalTimer),alert(_0x4ca9b7(0x132)),prosesKirimSoal(!![]));},0x3e8);}function acakUrutanSoal(_0x52025a){const _0x3c4c84=_0x5846f0,_0x1add99=[..._0x52025a];for(let _0x47cf28=_0x1add99[_0x3c4c84(0x139)]-0x1;_0x47cf28>0x0;_0x47cf28--){const _0xf2583f=Math['floor'](Math[_0x3c4c84(0x171)]()*(_0x47cf28+0x1));[_0x1add99[_0x47cf28],_0x1add99[_0xf2583f]]=[_0x1add99[_0xf2583f],_0x1add99[_0x47cf28]];}return _0x1add99;}function _0x1808(_0x1315d3,_0x27232a){_0x1315d3=_0x1315d3-0x131;const _0x2f590a=_0x2f59();let _0x1808a5=_0x2f590a[_0x1315d3];return _0x1808a5;}function mulaiKuis(){const _0x59b719=_0x5846f0;soalAktif=acakUrutanSoal(daftarSoal),indeksSekarang=0x0,jawabanUser=new Array(soalAktif[_0x59b719(0x139)])['fill'](''),startSection[_0x59b719(0x170)]['display']=_0x59b719(0x16d),resultSection[_0x59b719(0x170)][_0x59b719(0x152)]='none',quizSection['style'][_0x59b719(0x152)]=_0x59b719(0x155),tampilkanSoal(),mulaiTimer();}function tampilkanSoal(){const _0x30ab6=_0x5846f0,_0x362895=soalAktif[indeksSekarang];questionTextEl[_0x30ab6(0x178)]=''[_0x30ab6(0x13f)](indeksSekarang+0x1,'.\x20')[_0x30ab6(0x13f)](_0x362895[_0x30ab6(0x147)]),answerInputEl[_0x30ab6(0x156)]=jawabanUser[indeksSekarang],progressTextEl[_0x30ab6(0x144)]='Soal\x20'[_0x30ab6(0x13f)](indeksSekarang+0x1,_0x30ab6(0x15c))[_0x30ab6(0x13f)](soalAktif[_0x30ab6(0x139)]),prevBtn[_0x30ab6(0x17a)]=indeksSekarang===0x0,indeksSekarang===soalAktif['length']-0x1?(nextBtn[_0x30ab6(0x170)][_0x30ab6(0x152)]='none',submitBtn[_0x30ab6(0x170)][_0x30ab6(0x152)]=_0x30ab6(0x155)):(nextBtn['style'][_0x30ab6(0x152)]=_0x30ab6(0x155),submitBtn['style']['display']=_0x30ab6(0x16d)),answerInputEl['focus']();}function prosesKirimSoal(_0x18538e=![]){const _0x499225=_0x5846f0;jawabanUser[indeksSekarang]=answerInputEl[_0x499225(0x156)];if(!_0x18538e){const _0x532b35=jawabanUser[_0x499225(0x174)](_0x2af071=>_0x2af071[_0x499225(0x179)]()==='');if(_0x532b35){const _0x5ad87c=confirm(_0x499225(0x16b));if(!_0x5ad87c)return;}}clearInterval(intervalTimer);let _0x430fdc=0x0;const _0x33906b=document['getElementById'](_0x499225(0x13d));_0x33906b['innerHTML']='',soalAktif[_0x499225(0x166)]((_0x449a04,_0x2567ca)=>{const _0x200a81=_0x499225,_0x537900=jawabanUser[_0x2567ca]['trim'](),_0x61e396=_0x537900[_0x200a81(0x16c)](),_0x17f21a=_0x449a04['kunci'][_0x200a81(0x15a)](_0x61e396);if(_0x17f21a)_0x430fdc++;const _0x15198e=document[_0x200a81(0x15b)](_0x200a81(0x16e));_0x15198e[_0x200a81(0x15f)]=_0x200a81(0x158)[_0x200a81(0x13f)](_0x17f21a?_0x200a81(0x138):_0x200a81(0x176));const _0x1b07c6=_0x537900===''?_0x200a81(0x14b):_0x537900,_0x57b5d9=_0x17f21a?_0x200a81(0x14e):_0x200a81(0x164);_0x15198e[_0x200a81(0x178)]=_0x200a81(0x165)[_0x200a81(0x13f)](_0x2567ca+0x1,'.\x20')[_0x200a81(0x13f)](_0x449a04[_0x200a81(0x147)],_0x200a81(0x135))['concat'](_0x1b07c6,_0x200a81(0x14a))['concat'](_0x57b5d9,_0x200a81(0x167)),_0x33906b['appendChild'](_0x15198e);});const _0x5af5d3=Math[_0x499225(0x163)](_0x430fdc/soalAktif[_0x499225(0x139)]*0x64);document[_0x499225(0x159)](_0x499225(0x154))[_0x499225(0x144)]=_0x499225(0x14c)[_0x499225(0x13f)](_0x5af5d3),document[_0x499225(0x159)](_0x499225(0x137))[_0x499225(0x144)]='Benar\x20'[_0x499225(0x13f)](_0x430fdc,'\x20dari\x20')[_0x499225(0x13f)](soalAktif['length'],'\x20soal'),quizSection[_0x499225(0x170)][_0x499225(0x152)]=_0x499225(0x16d),resultSection['style'][_0x499225(0x152)]='block';}function kembaliKeAwal(){const _0x1db862=_0x5846f0;clearInterval(intervalTimer),indeksSekarang=0x0,jawabanUser=[],resultSection[_0x1db862(0x170)][_0x1db862(0x152)]='none',quizSection[_0x1db862(0x170)][_0x1db862(0x152)]=_0x1db862(0x16d),startSection[_0x1db862(0x170)]['display']=_0x1db862(0x155);}startBtn['addEventListener']('click',mulaiKuis),prevBtn['addEventListener'](_0x5846f0(0x136),function(){const _0x322074=_0x5846f0;jawabanUser[indeksSekarang]=answerInputEl[_0x322074(0x156)],indeksSekarang>0x0&&(indeksSekarang--,tampilkanSoal());}),nextBtn[_0x5846f0(0x169)](_0x5846f0(0x136),function(){const _0x72c0e7=_0x5846f0;jawabanUser[indeksSekarang]=answerInputEl[_0x72c0e7(0x156)],indeksSekarang<soalAktif['length']-0x1&&(indeksSekarang++,tampilkanSoal());}),submitBtn[_0x5846f0(0x169)](_0x5846f0(0x136),function(){prosesKirimSoal(![]);}),restartBtn['addEventListener']('click',kembaliKeAwal),answerInputEl[_0x5846f0(0x169)]('keypress',function(_0x5669fc){const _0x376682=_0x5846f0;_0x5669fc[_0x376682(0x14f)]===_0x376682(0x162)&&(_0x5669fc[_0x376682(0x13c)](),indeksSekarang<soalAktif[_0x376682(0x139)]-0x1?nextBtn[_0x376682(0x136)]():submitBtn[_0x376682(0x136)]());});
+let soalAktif = [];
+let indeksSekarang = 0;
+let jawabanUser = [];
+
+let sisaWaktu = durasiKuisDetik;
+let intervalTimer = null;
+
+// Elemen Halaman (Start, Quiz, Result)
+const startSection = document.getElementById("start-section");
+const quizSection = document.getElementById("quiz-section");
+const resultSection = document.getElementById("result-section");
+
+// Elemen Teks & Input
+const questionTextEl = document.getElementById("question-text");
+const answerInputEl = document.getElementById("answer-input");
+const progressTextEl = document.getElementById("progress-text");
+const timerBadgeEl = document.getElementById("timer-badge");
+
+// Elemen Tombol
+const startBtn = document.getElementById("start-btn");
+const prevBtn = document.getElementById("prev-btn");
+const nextBtn = document.getElementById("next-btn");
+const submitBtn = document.getElementById("submit-btn");
+const restartBtn = document.getElementById("restart-btn");
+
+// Format detik menjadi MM:SS
+function formatWaktu(detik) {
+    const menit = Math.floor(detik / 60);
+    const sisaDetik = detik % 60;
+    return `${String(menit).padStart(2, '0')}:${String(sisaDetik).padStart(2, '0')}`;
+}
+
+// Tampilkan info ringkas di halaman awal sebelum mulai
+document.getElementById("info-jumlah-soal").textContent = `${daftarSoal.length} Soal Isian Singkat`;
+document.getElementById("info-durasi").textContent = formatWaktu(durasiKuisDetik);
+
+// Tampilkan catatan pengerjaan di atas soal
+document.getElementById("instruction-note").innerHTML = catatanPengerjaan;
+
+// Menjalankan hitung mundur
+function mulaiTimer() {
+    clearInterval(intervalTimer);
+    sisaWaktu = durasiKuisDetik;
+    timerBadgeEl.textContent = `${formatWaktu(sisaWaktu)}`;
+    timerBadgeEl.classList.remove("warning");
+
+    intervalTimer = setInterval(() => {
+        sisaWaktu--;
+        timerBadgeEl.textContent = `${formatWaktu(sisaWaktu)}`;
+
+        if (sisaWaktu <= 10) {
+            timerBadgeEl.classList.add("warning");
+        }
+
+        if (sisaWaktu <= 0) {
+            clearInterval(intervalTimer);
+            alert("Waktu habis! Jawaban Anda otomatis dikirim.");
+            prosesKirimSoal(true);
+        }
+    }, 1000);
+}
+
+// Fungsi mengacak array soal (Algoritma Fisher-Yates)
+function acakUrutanSoal(arraySoal) {
+    const salinan = [...arraySoal];
+    for (let i = salinan.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [salinan[i], salinan[j]] = [salinan[j], salinan[i]];
+    }
+    return salinan;
+}
+
+// Fungsi memulai kuis saat tombol "Mulai Soal" ditekan
+function mulaiKuis() {
+    soalAktif = acakUrutanSoal(daftarSoal);
+    indeksSekarang = 0;
+    jawabanUser = new Array(soalAktif.length).fill("");
+    
+    startSection.style.display = "none";
+    resultSection.style.display = "none";
+    quizSection.style.display = "block";
+    
+    tampilkanSoal();
+    mulaiTimer();
+}
+
+// Fungsi merender soal ke layar
+function tampilkanSoal() {
+    const soal = soalAktif[indeksSekarang];
+    questionTextEl.innerHTML = `${indeksSekarang + 1}. ${soal.pertanyaan}`;
+    answerInputEl.value = jawabanUser[indeksSekarang];
+    progressTextEl.textContent = `Soal ${indeksSekarang + 1} / ${soalAktif.length}`;
+
+    prevBtn.disabled = (indeksSekarang === 0);
+
+    if (indeksSekarang === soalAktif.length - 1) {
+        nextBtn.style.display = "none";
+        submitBtn.style.display = "block";
+    } else {
+        nextBtn.style.display = "block";
+        submitBtn.style.display = "none";
+    }
+
+    answerInputEl.focus();
+}
+
+// Logika penilaian dan tampilan hasil (tanpa menampilkan kunci jawaban)
+function prosesKirimSoal(otomatisKarenaWaktu = false) {
+    jawabanUser[indeksSekarang] = answerInputEl.value;
+
+    if (!otomatisKarenaWaktu) {
+        const adaKosong = jawabanUser.some(j => j.trim() === "");
+        if (adaKosong) {
+            const yakin = confirm("Masih ada soal yang belum diisi. Tetap kirim jawaban?");
+            if (!yakin) return;
+        }
+    }
+
+    clearInterval(intervalTimer);
+
+    let benarCount = 0;
+    const reviewContainer = document.getElementById("review-container");
+    reviewContainer.innerHTML = "";
+
+    soalAktif.forEach((soal, index) => {
+        const jwbAsli = jawabanUser[index].trim();
+        const jwbBersih = jwbAsli.toLowerCase();
+        const isBenar = soal.kunci.includes(jwbBersih);
+
+        if (isBenar) benarCount++;
+
+        const itemDiv = document.createElement("div");
+        itemDiv.className = `review-item ${isBenar ? 'benar' : 'salah'}`;
+        
+        const tampilanJwbUser = jwbAsli === "" ? "<i>(Tidak dijawab)</i>" : jwbAsli;
+        const infoKoreksi = isBenar 
+            ? `<span style="color:#27ae60; font-weight:bold;">✓ Benar</span>` 
+            : `<span style="color:#c0392b; font-weight:bold;">✗ Salah</span>`;
+
+        itemDiv.innerHTML = `
+            <div class="review-q">${index + 1}. ${soal.pertanyaan}</div>
+            <div class="review-a">Jawaban Anda: ${tampilanJwbUser} — ${infoKoreksi}</div>
+        `;
+        reviewContainer.appendChild(itemDiv);
+    });
+
+    const skorAkhir = Math.round((benarCount / soalAktif.length) * 100);
+    document.getElementById("final-score").textContent = `Skor Akhir: ${skorAkhir}`;
+    document.getElementById("score-detail").textContent = `Benar ${benarCount} dari ${soalAktif.length} soal`;
+
+    quizSection.style.display = "none";
+    resultSection.style.display = "block";
+}
+
+// Fungsi kembali ke tampilan awal (layar tombol Mulai Soal)
+function kembaliKeAwal() {
+    clearInterval(intervalTimer);
+    indeksSekarang = 0;
+    jawabanUser = [];
+
+    resultSection.style.display = "none";
+    quizSection.style.display = "none";
+    startSection.style.display = "block";
+}
+
+// Event Tombol Mulai Soal
+startBtn.addEventListener("click", mulaiKuis);
+
+// Event Tombol Sebelumnya
+prevBtn.addEventListener("click", function() {
+    jawabanUser[indeksSekarang] = answerInputEl.value;
+    if (indeksSekarang > 0) {
+        indeksSekarang--;
+        tampilkanSoal();
+    }
+});
+
+// Event Tombol Selanjutnya
+nextBtn.addEventListener("click", function() {
+    jawabanUser[indeksSekarang] = answerInputEl.value;
+    if (indeksSekarang < soalAktif.length - 1) {
+        indeksSekarang++;
+        tampilkanSoal();
+    }
+});
+
+// Event Tombol Kirim Soal
+submitBtn.addEventListener("click", function() {
+    prosesKirimSoal(false);
+});
+
+// Event Tombol Ulangi Kuis -> Kembali ke layar awal
+restartBtn.addEventListener("click", kembaliKeAwal);
+
+// Dukungan tombol Enter pada keyboard
+answerInputEl.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        if (indeksSekarang < soalAktif.length - 1) {
+            nextBtn.click();
+        } else {
+            submitBtn.click();
+        }
+    }
+});
